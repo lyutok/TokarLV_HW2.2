@@ -40,27 +40,26 @@ class ViewController: UIViewController {
         blueSlider.value = 0
         blueSlider.minimumTrackTintColor = .blue
         
-        redLabel.text = String(round(redSlider.value * 100) / 100)
-        greenLabel.text = String(round(greenSlider.value * 100) / 100)
-        blueLabel.text = String(round(greenSlider.value * 100) / 100)
+        redLabel.text = String(redSlider.value)
+        greenLabel.text = String(greenSlider.value)
+        blueLabel.text = String(blueSlider.value)
         
     }
 
     @IBAction public func redSliderAction(_ sender: UISlider) {
-        let redValue: Float = sender.value
-        redLabel.text = String(redValue)
+        redLabel.text = String(round(sender.value * 100) / 100)
         
-        viewColored.backgroundColor = UIColor (red: CGFloat(redValue), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        viewColored.backgroundColor = UIColor (red: CGFloat(sender.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
     
     @IBAction func greenSliderAction(_ sender: UISlider) {
-        greenLabel.text = String(sender.value)
+        greenLabel.text = String(round(sender.value * 100) / 100)
         
-        viewColored.backgroundColor = UIColor (red: CGFloat(redSlider.value), green: CGFloat(sender.value), blue: 0, alpha: 1)
+        viewColored.backgroundColor = UIColor (red: CGFloat(redSlider.value), green: CGFloat(sender.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
     
     @IBAction func blueSliderAction(_ sender: UISlider) {
-        blueLabel.text = String(sender.value)
+        blueLabel.text = String(round(sender.value * 100) / 100)
         
         viewColored.backgroundColor = UIColor (red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(sender.value), alpha: 1)
     }
