@@ -47,6 +47,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="999" constant="230" id="BC2-BX-l46"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="redSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="HCk-lf-Ujk"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -78,6 +81,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="999" constant="230" id="wMV-Lj-Mse"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="greenSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="gIS-rR-0wb"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -109,6 +115,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="999" constant="230" id="PHe-22-kpa"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="blueSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="A0u-cZ-36x"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -137,10 +146,19 @@
                             <constraint firstItem="0dD-sU-5u2" firstAttribute="top" secondItem="8Sm-IN-zKU" secondAttribute="bottom" constant="103" id="iqS-BK-BJ0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueLabel" destination="c25-n4-bVo" id="BXq-8s-nkN"/>
+                        <outlet property="blueSlider" destination="P0A-E1-R0M" id="ADC-aK-Bb8"/>
+                        <outlet property="greenLabel" destination="v6g-Ut-UC9" id="eHi-yl-8m5"/>
+                        <outlet property="greenSlider" destination="3YI-OM-sEO" id="qDm-OT-OCA"/>
+                        <outlet property="redLabel" destination="EXG-5X-N9U" id="hLq-uO-qO5"/>
+                        <outlet property="redSlider" destination="Ls6-Je-1R1" id="sHC-BK-MXR"/>
+                        <outlet property="viewColored" destination="8Sm-IN-zKU" id="hog-vk-Qfa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7.2000000000000002" y="57.121439280359823"/>
+            <point key="canvasLocation" x="58" y="67"/>
         </scene>
     </scenes>
     <resources>
