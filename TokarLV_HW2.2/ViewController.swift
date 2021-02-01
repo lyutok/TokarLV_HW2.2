@@ -23,22 +23,26 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         viewColored.layer.cornerRadius = 30
+        viewColored.backgroundColor = .black
         
         redSlider.minimumValue = 0
         redSlider.maximumValue = 1
+        redSlider.value = 0
         redSlider.minimumTrackTintColor = .red
         
         greenSlider.minimumValue = 0
         greenSlider.maximumValue = 1
+        greenSlider.value = 0
         greenSlider.minimumTrackTintColor = .green
         
         blueSlider.minimumValue = 0
         blueSlider.maximumValue = 1
+        blueSlider.value = 0
         blueSlider.minimumTrackTintColor = .blue
         
-        redLabel.text = String(redSlider.value)
-        greenLabel.text = String(greenSlider.value)
-        blueLabel.text = String(greenSlider.value)
+        redLabel.text = String(round(redSlider.value * 100) / 100)
+        greenLabel.text = String(round(greenSlider.value * 100) / 100)
+        blueLabel.text = String(round(greenSlider.value * 100) / 100)
         
     }
 
