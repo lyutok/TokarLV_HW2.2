@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         viewColored.layer.cornerRadius = 10
-       // navigationItem.hidesBackButton = true
+        navigationItem.hidesBackButton = true
         navigationController?.navigationBar.barTintColor = view.backgroundColor
         
         redSlider.minimumValue = 0
@@ -53,22 +53,18 @@ class ViewController: UIViewController {
         blueLabel.text = String(blueSlider.value)
         
         redTextField.text = String(redSlider.value)
+        redTextField.delegate = self
         greenTextField.text = String(greenSlider.value)
+        greenTextField.delegate = self
         blueTextField.text = String(blueSlider.value)
+        blueTextField.delegate = self
         
         viewColored.backgroundColor = UIColor(red: CGFloat(redSlider.value),
                                             green: CGFloat(greenSlider.value),
                                             blue: CGFloat(blueSlider.value),
-                                            alpha: 1)
-        
+                                            alpha: 1)        
     }
     
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//       // guard let navigationVC = segue.destination as? UINavigationController else { return }
-//        guard let viewVC = navigationVC.topViewController as? MainScreenViewController else { return }
-//        viewVC.delegate = self
-//    }
 
     @IBAction public func redSliderAction(_ sender: UISlider) {
         redLabel.text = roundingValuesForText(sender.value)
@@ -101,5 +97,57 @@ class ViewController: UIViewController {
     //MARK: Rounding
     private func roundingValuesForText (_ value: Float) -> String {
         return String(round(value * 100) / 100)
+    }
+    
+    //MARK: Alerts
+        private func showAlert()
+        {
+            let alertController = UIAlertController(title: "Wrong data!",
+                                                    message: "Please, use a number from 0 to 1.",
+                                                    preferredStyle: .alert)
+            let alertOkAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(alertOkAction)
+            
+            present(alertController, animated: true)
+        }
+    
+    //MARK: Done button
+    
+    
+    
+}
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let newValue = textField.text else { return }
+        guard let numberValue = Float(newValue), numberValue <= 1 else {
+            showAlert()
+            textField.text = ""
+            return
+        }
+        if textField == redTextField {
+            redSlider.value = numberValue
+            redLabel.text = roundingValuesForText(numberValue)
+            
+            viewColored.backgroundColor = UIColor (red: CGFloat(numberValue), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+            
+        } else if textField == greenTextField {
+            greenSlider.value = numberValue
+            greenLabel.text = roundingValuesForText(numberValue)
+            
+            viewColored.backgroundColor = UIColor (red: CGFloat(redSlider.value), green: CGFloat(numberValue), blue: CGFloat(blueSlider.value), alpha: 1)
+            
+        } else {
+            blueSlider.value = numberValue
+            blueLabel.text = roundingValuesForText(numberValue)
+            
+            viewColored.backgroundColor = UIColor (red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(numberValue), alpha: 1)
+    }
+        view.endEditing(true)
+}
+    //Hide keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
 }
