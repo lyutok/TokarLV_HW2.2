@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         viewColored.layer.cornerRadius = 10
+        navigationItem.hidesBackButton = true
+        navigationController?.navigationBar.barTintColor = view.backgroundColor
         
         redSlider.minimumValue = 0
         redSlider.maximumValue = 1

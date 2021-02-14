@@ -39,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="646-38-jfB">
-                                <rect key="frame" x="16" y="187" width="288" height="134"/>
+                                <rect key="frame" x="16" y="149" width="288" height="134"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="JcV-fL-aLq">
                                         <rect key="frame" x="0.0" y="0.0" width="17" height="134"/>
@@ -142,10 +142,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Sm-IN-zKU">
-                                <rect key="frame" x="30" y="69" width="260" height="90"/>
+                                <rect key="frame" x="30" y="54" width="260" height="80"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="TSS-fg-RKI"/>
+                                    <constraint firstAttribute="height" constant="80" id="TSS-fg-RKI"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grH-xq-NBD">
@@ -161,9 +161,9 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="grH-xq-NBD" secondAttribute="bottom" constant="120" id="3rO-5V-Kj6"/>
                             <constraint firstItem="646-38-jfB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DwR-wV-7T8"/>
-                            <constraint firstItem="646-38-jfB" firstAttribute="top" secondItem="8Sm-IN-zKU" secondAttribute="bottom" constant="28" id="RFw-Z0-CdV"/>
+                            <constraint firstItem="646-38-jfB" firstAttribute="top" secondItem="8Sm-IN-zKU" secondAttribute="bottom" constant="15" id="RFw-Z0-CdV"/>
                             <constraint firstItem="8Sm-IN-zKU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ZPN-Al-TGh"/>
-                            <constraint firstItem="8Sm-IN-zKU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="f3c-iE-1v8"/>
+                            <constraint firstItem="8Sm-IN-zKU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="f3c-iE-1v8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Sm-IN-zKU" secondAttribute="trailing" constant="30" id="krA-bA-Cz4"/>
                             <constraint firstItem="grH-xq-NBD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="si9-Ua-bnd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="646-38-jfB" secondAttribute="trailing" constant="16" id="uQP-nb-T8z"/>
@@ -203,7 +203,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIt-M2-Vai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-911.25" y="-13.732394366197184"/>
+            <point key="canvasLocation" x="-707" y="-15"/>
         </scene>
     </scenes>
     <resources>
