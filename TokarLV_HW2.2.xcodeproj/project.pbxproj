@@ -13,6 +13,7 @@
 		2070367825C86A9D00C99FFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2070367625C86A9D00C99FFE /* Main.storyboard */; };
 		2070367A25C86AA400C99FFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2070367925C86AA400C99FFE /* Assets.xcassets */; };
 		2070367D25C86AA400C99FFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2070367B25C86AA400C99FFE /* LaunchScreen.storyboard */; };
+		20BAB1AF25D942D800B3D4AF /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BAB1AE25D942D800B3D4AF /* MainScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2070367925C86AA400C99FFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2070367C25C86AA400C99FFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2070367E25C86AA400C99FFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20BAB1AE25D942D800B3D4AF /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				2070367225C86A9D00C99FFE /* SceneDelegate.swift */,
 				2070367425C86A9D00C99FFE /* ViewController.swift */,
 				2070367625C86A9D00C99FFE /* Main.storyboard */,
+				20BAB1AE25D942D800B3D4AF /* MainScreenViewController.swift */,
 				2070367925C86AA400C99FFE /* Assets.xcassets */,
 				2070367B25C86AA400C99FFE /* LaunchScreen.storyboard */,
 				2070367E25C86AA400C99FFE /* Info.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2070367525C86A9D00C99FFE /* ViewController.swift in Sources */,
+				20BAB1AF25D942D800B3D4AF /* MainScreenViewController.swift in Sources */,
 				2070367125C86A9D00C99FFE /* AppDelegate.swift in Sources */,
 				2070367325C86A9D00C99FFE /* SceneDelegate.swift in Sources */,
 			);
