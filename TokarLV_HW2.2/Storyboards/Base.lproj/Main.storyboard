@@ -21,7 +21,7 @@
                     <navigationItem key="navigationItem" id="43X-yA-1Cz">
                         <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="Y6P-5M-NfE">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="D79-nK-TcR"/>
+                                <segue destination="BYZ-38-t0r" kind="show" id="2ky-Me-nTS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -154,6 +154,9 @@
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CKd-w9-O1O"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

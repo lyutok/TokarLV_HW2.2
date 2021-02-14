@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var delegate: ViewControllerDelegate!
 
     @IBOutlet var redLabel: UILabel!
     @IBOutlet var greenLabel: UILabel!
@@ -28,7 +30,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         viewColored.layer.cornerRadius = 10
-        navigationItem.hidesBackButton = true
+       // navigationItem.hidesBackButton = true
         navigationController?.navigationBar.barTintColor = view.backgroundColor
         
         redSlider.minimumValue = 0
@@ -60,6 +62,13 @@ class ViewController: UIViewController {
                                             alpha: 1)
         
     }
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//       // guard let navigationVC = segue.destination as? UINavigationController else { return }
+//        guard let viewVC = navigationVC.topViewController as? MainScreenViewController else { return }
+//        viewVC.delegate = self
+//    }
 
     @IBAction public func redSliderAction(_ sender: UISlider) {
         redLabel.text = roundingValuesForText(sender.value)
@@ -81,9 +90,16 @@ class ViewController: UIViewController {
         
         viewColored.backgroundColor = UIColor (red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(sender.value), alpha: 1)
     }
+    
+    @IBAction func doneButton(_ sender: UIButton) {
+        delegate.setNewBackgroundColor(for: UIColor(red: CGFloat(redSlider.value),
+                                                    green: CGFloat(greenSlider.value),
+                                                    blue: CGFloat(blueSlider.value), alpha: 1))
+        dismiss(animated: true)
+    }
+    
     //MARK: Rounding
     private func roundingValuesForText (_ value: Float) -> String {
         return String(round(value * 100) / 100)
     }
 }
-
