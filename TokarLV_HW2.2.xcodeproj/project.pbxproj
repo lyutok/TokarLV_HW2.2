@@ -58,16 +58,40 @@
 		2070366F25C86A9D00C99FFE /* TokarLV_HW2.2 */ = {
 			isa = PBXGroup;
 			children = (
-				2070367025C86A9D00C99FFE /* AppDelegate.swift */,
-				2070367225C86A9D00C99FFE /* SceneDelegate.swift */,
-				2070367425C86A9D00C99FFE /* ViewController.swift */,
-				2070367625C86A9D00C99FFE /* Main.storyboard */,
-				20BAB1AE25D942D800B3D4AF /* MainScreenViewController.swift */,
+				20BAB1B325D9437900B3D4AF /* ViewControllers */,
+				20BAB1B525D9439100B3D4AF /* Storyboards */,
+				20BAB1B125D9435100B3D4AF /* SupportingFiles */,
 				2070367925C86AA400C99FFE /* Assets.xcassets */,
-				2070367B25C86AA400C99FFE /* LaunchScreen.storyboard */,
 				2070367E25C86AA400C99FFE /* Info.plist */,
 			);
 			path = TokarLV_HW2.2;
+			sourceTree = "<group>";
+		};
+		20BAB1B125D9435100B3D4AF /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2070367025C86A9D00C99FFE /* AppDelegate.swift */,
+				2070367225C86A9D00C99FFE /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		20BAB1B325D9437900B3D4AF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2070367425C86A9D00C99FFE /* ViewController.swift */,
+				20BAB1AE25D942D800B3D4AF /* MainScreenViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		20BAB1B525D9439100B3D4AF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2070367625C86A9D00C99FFE /* Main.storyboard */,
+				2070367B25C86AA400C99FFE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
