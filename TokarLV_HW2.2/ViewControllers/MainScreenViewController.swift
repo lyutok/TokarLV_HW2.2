@@ -12,14 +12,7 @@ protocol ViewControllerDelegate {
 }
 
 class MainScreenViewController: UIViewController {
-    
-   // var delegate: ViewControllerDelegate!
-
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        
-//    }
-    
+        
     @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue){
         
     }
@@ -27,6 +20,7 @@ class MainScreenViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let viewVC = segue.destination as? ViewController else { return }
         viewVC.delegate = self
+        
     }
 }
 

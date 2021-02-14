@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         
         redSlider.minimumValue = 0
         redSlider.maximumValue = 1
-        redSlider.value = 0.57
+        redSlider.value = 0.6
         redSlider.minimumTrackTintColor = .red
         
         greenSlider.minimumValue = 0
@@ -110,11 +110,6 @@ class ViewController: UIViewController {
             
             present(alertController, animated: true)
         }
-    
-    //MARK: Done button
-    
-    
-    
 }
 
 extension ViewController: UITextFieldDelegate {
@@ -143,11 +138,17 @@ extension ViewController: UITextFieldDelegate {
             
             viewColored.backgroundColor = UIColor (red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(numberValue), alpha: 1)
     }
-        view.endEditing(true)
+        
+     //   UIBarButtonItem(
+      //  self.navigationItem.backBarButtonItem = doneButton();
+        
+    
 }
     //Hide keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
+    
+    
 }
