@@ -20,6 +20,10 @@ class MainScreenViewController: UIViewController {
 //        
 //    }
     
+    @IBAction func unwindSegueToMainScreen(segue: UIStoryboardSegue){
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let viewVC = segue.destination as? ViewController else { return }
         viewVC.delegate = self
